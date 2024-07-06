@@ -1,0 +1,217 @@
+
+
+body {
+    background-color: #051c35; 
+    color: #ffffff; 
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+#spinner {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 30, 0.8); 
+    z-index: 20000; 
+}
+
+#spinner .loader {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#spinner .circle {
+    width: 80px; 
+    height: 80px; 
+    border: 4px solid transparent; 
+    border-top-color: #ffffff; 
+    border-radius: 50%;
+    animation: spin 1s linear infinite; 
+    margin-bottom: 20px; 
+}
+
+#spinner .loading-text {
+    color: #ffffff; 
+    font-size: 24px; 
+    margin-top: 10px; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+#formularioLista {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+}
+
+
+#formularioLista button {
+    margin-top: 15px; 
+    margin-bottom: 5px; 
+    padding: 10px 20px;
+    background-color: #051c35; /* Azul oscuro */
+    color: #ffffff; 
+    border: 1px solid #1a4781; 
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif; 
+}
+
+#formularioLista button:hover {
+    background-color: #1a4781; 
+}
+
+#formularioLista table {
+    margin-top: 10px; 
+}
+
+#tablaElementos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0c2340; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffffff; 
+}
+
+#tablaElementos th,
+#tablaElementos td {
+    border: 1px solid #173b6c; 
+    padding: 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif; 
+}
+
+#tablaElementos th {
+    background-color: #1a4781; 
+}
+
+
+#formularioABM {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #173b6c; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px; 
+    color: #ffffff; 
+    font-family: 'Arial', sans-serif; 
+}
+
+#formularioABM label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff; 
+    font-family: 'Arial', sans-serif; 
+}
+
+#formularioABM input {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #1a4781; 
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #0c2340; 
+    color: #ffffff; 
+}
+
+#formularioABM button {
+    margin-top: 12px;
+    padding: 10px 20px;
+    background-color: #051c35; 
+    color: #ffffff; 
+    border: 1px solid #1a4781;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif; 
+}
+
+#formularioABM button:hover {
+    background-color: #0056b3; 
+}
+
+
+#formularioABM #tipo-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff; 
+    font-family: 'Arial', sans-serif; 
+}
+
+#formularioABM #tipo {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #1a4781; 
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #0c2340; 
+    color: #ffffff; 
+    font-family: 'Arial', sans-serif; 
+}
+
+
+#formularioABM #tipo:focus {
+    outline: none; 
+    border-color: #ffffff;
+}
+
+#botonesABM {
+    display: flex; 
+    gap: 10px; 
+    margin-top: 12px;
+    justify-content: flex-end;
+}
+
+#formularioABM #aceptar-btn,
+#formularioABM #cancelar-btn {
+    min-width: 120px;
+    padding: 10px 20px;
+    background-color: #051c35; 
+    color: #ffffff; 
+    border: 1px solid #1a4781;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif; 
+}
+
+#formularioABM #aceptar-btn:hover,
+#formularioABM #cancelar-btn:hover {
+    background-color: #0056b3; 
+}
+
+
+.hidden {
+    display: none;
+}

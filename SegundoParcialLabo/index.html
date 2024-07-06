@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABM Personas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="spinner">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="loading-text">Loading...</div>
+        </div>
+    </div>
+
+
+    <div id="formularioLista">
+        <table id="tablaElementos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>DNI</th>
+                    <th>Pais de origen</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button onclick="mostrarFormularioAlta()">Agregar Elemento</button>
+    </div>
+
+    <div id="formularioABM" class="hidden">
+        <h2 id="accionABM">Alta</h2>
+        <form id="formABM">
+            <input type="hidden" id="id">
+            <div id="nombre-container">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required><br>
+            </div>
+            <div id="apellido-container">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" required><br>
+            </div>
+            <div id="fechaNacimiento-container">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="text" id="fechaNacimiento" required><br>
+            </div>
+            <div id="tipo-container">
+                <label id="tipo-label" for="tipo">Tipo:</label>
+                <select id="tipo" onchange="mostrarCamposTipo()">
+                    <option value="">Seleccione</option>
+                    <option value="extranjero">Extranjero</option>
+                    <option value="ciudadano">Ciudadano</option>
+                </select><br>
+            </div>
+            <div id="dni-container" class="hidden">
+                <label for="dni">DNI:</label>
+                <input type="number" id="dni"><br>
+            </div>
+            <div id="paisOrigen-container" class="hidden">
+                <label for="paisOrigen">Pais de origen:</label>
+                <input type="text" id="paisOrigen"><br>
+            </div>
+            <div id="botonesABM"></div>
+                <button id="aceptar-btn" type="button" onclick="aceptarABM()">Aceptar</button>
+                <button id="cancelar-btn" type="button" onclick="cancelarABM()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
